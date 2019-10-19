@@ -246,11 +246,15 @@ void KulibinAuto_Platform::__moveLeftMotor(int16_t power) {
 		analogWrite(enB_PIN, motorPower);
 		digitalWrite(in3_PIN, LOW);
 		digitalWrite(in4_PIN, HIGH);
-	} else {
+	} else if (power > 0) {
 		uint8_t motorPower = (uint8_t)(power * 2.5);
 		analogWrite(enB_PIN, motorPower);
 		digitalWrite(in3_PIN, HIGH);
 		digitalWrite(in4_PIN, LOW);
+	} else if (power == 0) {
+		analogWrite(enB_PIN, 255);
+		digitalWrite(in3_PIN, HIGH);
+		digitalWrite(in4_PIN, HIGH);
 	}
 }
 
@@ -265,10 +269,14 @@ void KulibinAuto_Platform::__moveRightMotor(int16_t power) {
 		analogWrite(enA_PIN, motorPower);
 		digitalWrite(in1_PIN, HIGH);
 		digitalWrite(in2_PIN, LOW);
-	} else {
+	} else if (power > 0) {
 		uint8_t motorPower = (uint8_t)(power * 2.5);
 		analogWrite(enA_PIN, motorPower);
 		digitalWrite(in1_PIN, LOW);
+		digitalWrite(in2_PIN, HIGH);
+	} else if (power == 0) {
+		analogWrite(enA_PIN, 255);
+		digitalWrite(in1_PIN, HIGH);
 		digitalWrite(in2_PIN, HIGH);
 	}
 }
