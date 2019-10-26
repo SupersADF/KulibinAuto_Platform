@@ -41,8 +41,8 @@ private:
 	void __moveRightMotor(int16_t power);
 
 private:
-	uint8_t enA_PIN = 10;
-	uint8_t enB_PIN = 11;
+	uint8_t enA_PIN = 6;
+	uint8_t enB_PIN = 5;
 	uint8_t in1_PIN = 12;
 	uint8_t in2_PIN = 8;
 	uint8_t in3_PIN = 7;

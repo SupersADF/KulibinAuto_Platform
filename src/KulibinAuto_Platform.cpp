@@ -159,7 +159,7 @@ void KulibinAuto_Platform::moveSteer(uint8_t mode, int8_t steer = 0, int8_t powe
 void KulibinAuto_Platform::moveMotor(uint8_t mode, uint8_t motor, int8_t power = 0, int16_t mode_value = 0, uint8_t stop = false) {
 	if (mode == MOVE_ON) {
 		if (motor == MOTOR_LEFT) {
-				__moveLeftMotor(power);
+			__moveLeftMotor(power);
 		} else if (motor == MOTOR_RIGHT) {
 			__moveRightMotor(power);
 		}
