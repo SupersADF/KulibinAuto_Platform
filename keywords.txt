@@ -12,6 +12,8 @@ KulibinAuto_Platform	KEYWORD1
 #######################################
 
 getDegree	KEYWORD2
+resetDegree	KEYWORD2
+getTicksEncoder	KEYWORD2
 resetTicksEncoder	KEYWORD2
 moveSteer	KEYWORD2
 moveTank	KEYWORD2
